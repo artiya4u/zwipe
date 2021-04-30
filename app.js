@@ -32,17 +32,9 @@ const argv = yargs.option('wheel', {
   alias: 'w',
   describe: 'Wheel circumference in metre',
   type: 'number',
-}).option('min', {
-  alias: 'm',
-  describe: 'Minimum speed to move bicycle in km/h',
-  type: 'number',
 }).help()
   .alias('help', 'h')
   .argv;
-
-if (argv.min !== undefined && !isNaN(argv.min)) {
-  control.minMoveSpeed = argv.min;
-}
 
 if (argv.wheel !== undefined && !isNaN(argv.wheel)) {
   sensors.wheelCircumference = argv.wheel;

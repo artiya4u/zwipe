@@ -1,6 +1,6 @@
 const control = {
-  likeThreshold: 0.2,
-  superLikeThreshold: 0.3,
+  likeThreshold: 1.20, // +20%
+  superLikeThreshold: 1.30, // + 30%
   targetDistance: 100,
   lastMove: Date.now(),
   sumSpeed: 0,
@@ -8,7 +8,7 @@ const control = {
   updateCount: 0,
   overallDistance: 0,
   currentDistance: 0,
-  currentStart: Date.now(),
+  webSocketClient: null,
 };
 
 control.move = function (speed) {
@@ -31,15 +31,24 @@ control.move = function (speed) {
     // Swipe
     if (speed >= control.averageSpeed * control.superLikeThreshold) {
       // Sprint >> Super like
-      console.log('Super Like', speedKPH);
+      console.log('💗 Super Like!');
+      control.action('super-like');
     } else if (speed >= control.averageSpeed * control.likeThreshold) {
       // Attack >> Like
-      console.log('Like', speedKPH);
+      console.log('👍 Like');
+      control.action('like');
     } else {
       // Pass
-      console.log('Pass', speedKPH);
+      console.log('❌ Pass', control.averageSpeed * control.superLikeThreshold);
+      control.action('pass');
     }
   }
 };
+
+control.action = function (action) {
+  if (control.webSocketClient != null) {
+    control.webSocketClient.send(JSON.stringify({type: 'action', value: action}));
+  }
+}
 
 module.exports = control;

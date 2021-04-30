@@ -67,6 +67,8 @@ wss.on('connection', function connection(ws) {
     }
   });
 
+  control.webSocketClient = ws;
+
   sensors.addSensorsListener(function (data) {
     // Send data to extension.
     ws.send(JSON.stringify(data));

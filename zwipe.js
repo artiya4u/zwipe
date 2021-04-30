@@ -1,7 +1,4 @@
-const yargs = require('yargs');
 const WebSocket = require('ws');
-
-const control = require('./control');
 const sensors = require('./sensors');
 
 const wsPort = 48008;
@@ -27,25 +24,6 @@ const wss = new WebSocket.Server({
     // should not be compressed.
   },
 });
-
-const argv = yargs.option('wheel', {
-  alias: 'w',
-  describe: 'Wheel circumference in metre',
-  type: 'number',
-}).help()
-  .alias('help', 'h')
-  .argv;
-
-if (argv.wheel !== undefined && !isNaN(argv.wheel)) {
-  sensors.wheelCircumference = argv.wheel;
-}
-console.log('minMoveSpeed:', control.minMoveSpeed);
-console.log('wheelCircumference:', sensors.wheelCircumference);
-sensors.addSensorsListener(function (data) {
-  if (data.type === 'speed') { // Move from speed
-    control.move(data.value);
-  }
-});
 sensors.start();
 
 wss.on('connection', function connection(ws) {
@@ -58,16 +36,11 @@ wss.on('connection', function connection(ws) {
         } else if (message.type === 'wheel') {
           // Update wheel circumference
           sensors.setWheelCircumference(message.value);
-        } else if (message.type === 'target') {
-          // Update meters target to swipe
-          control.targetDistance = message.value;
         }
       }
     } catch (e) {
     }
   });
-
-  control.webSocketClient = ws;
 
   sensors.addSensorsListener(function (data) {
     // Send data to extension.

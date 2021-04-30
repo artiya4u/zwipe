@@ -12,12 +12,15 @@ sensors.listener = function (data) {
   if (data.CalculatedSpeed !== undefined) {
     userData.type = 'speed';
     userData.value = data.CalculatedSpeed; // To M/S
+    userData.raw = data;
   } else if (data.ComputedHeartRate !== undefined) {
     userData.type = 'heartrate';
     userData.value = data.ComputedHeartRate;
+    userData.raw = data;
   } else if (data.CalculatedCadence !== undefined) {
     userData.type = 'cadence';
     userData.value = data.CalculatedCadence;
+    userData.raw = data;
   } else {
     console.log(data);
   }

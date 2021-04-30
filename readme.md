@@ -15,14 +15,15 @@ Swipe Tinder on your bike
   and goto menu "
   Options" select "List All Device", find "ANT USBStick2". Select "WinUS" and press install driver button. Other
   platform see https://github.com/Loghorn/ant-plus
-- Install [Zwipe Chrome extension](https://chrome.google.com/webstore/detail/bbaopcbihfmndeedafhcafpojpibkgic)
+- Install [Zwipe Chrome Extension](https://chrome.google.com/webstore/detail/bbaopcbihfmndeedafhcafpojpibkgic) from
+  WebStore
 - Download and extract the Zwipe zip file from the release page: https://github.com/artiya4u/zwipe/releases
 
 ### How to use
 
 - Run Zwipe on your PC using command `node zwipe.js`
 - Goto Tinder and login to the web app: https://tinder.com/app/recs
-- Ride at your tempo for 100m to pass a Tinder profile.
-- Attack to like a Tinder profile by increasing your speed more than 20% of your average speed.
-- Sprint to super like a Tinder profile by increasing your speed more than 30% of your average speed. 
-  Like when not enough super like.
+- Ride at your tempo for 100m to go pass a Tinder profile.
+- Attack to like a profile by increasing your speed more than 20% of your average speed.
+- Sprint to super like a profile by increasing your speed more than 30% of your average speed. Like when not enough
+  super like.

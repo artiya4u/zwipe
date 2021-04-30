@@ -1,10 +1,10 @@
 {
   "name": "zwipe",
   "version": "0.0.1",
-  "description": "Tinder on your bike",
-  "main": "app.js",
+  "description": "Swipe Tinder on your bike",
+  "main": "zwipe.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node zwipe.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

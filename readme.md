@@ -21,7 +21,8 @@ Swipe Tinder on your bike
 ### How to use
 
 - Run Zwipe on your PC using command `node zwipe.js`
-- Goto Tinder web app: https://tinder.com/app/recs
+- Goto Tinder and login to the web app: https://tinder.com/app/recs
 - Ride at your tempo for 100m to pass a Tinder profile.
 - Attack to like a Tinder profile by increasing your speed more than 20% of your average speed.
-- Sprint to super like a Tinder profile by increasing your speed more than 30% of your average speed.
+- Sprint to super like a Tinder profile by increasing your speed more than 30% of your average speed. 
+  Like when not enough super like.

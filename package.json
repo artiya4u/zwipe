@@ -1,0 +1,41 @@
+{
+  "name": "zwipe",
+  "version": "0.0.1",
+  "description": "Tinder on your bike",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tinder",
+    "bicycle",
+    "cycling"
+  ],
+  "author": {
+    "name": "Artiya Thinkumpang",
+    "email": "artiya4u@gmail.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/artiya4u/zwipe.git"
+  },
+  "bugs": "https://github.com/artiya4u/zwipe/issues",
+  "dependencies": {
+    "ant-plus": "^0.1.24",
+    "ws": "^7.2.3",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}

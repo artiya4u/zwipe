@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Swipe Tinder on your bike",
   "main": "zwipe.js",
+  "bin": "bin.js",
   "scripts": {
     "start": "node zwipe.js",
     "test": "echo \"Error: no test specified\" && exit 1"

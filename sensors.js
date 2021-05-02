@@ -50,6 +50,10 @@ sensors.scanAll = function () {
   }
 };
 
+sensors.onStart = function (callback) {
+  sensors.onStartCallBack = callback;
+}
+
 sensors.addSensorsListener = function (listener) {
   sensors.listeners.push(listener);
 };
@@ -112,10 +116,15 @@ sensors.start = function () {
   stick.on('startup', function () {
     console.log('sensors startup');
     sensors.speedScanner.scan();
+    if (sensors.onStartCallBack !== null) {
+      sensors.onStartCallBack();
+    }
   });
 
   if (!stick.open()) {
     console.log('Stick not found!');
+    console.log('Please use GarminStick2 compatible ANT+ USB stick.');
+    console.log('More information on https://github.com/Loghorn/ant-plus');
   }
   sensors.started = true;
 };

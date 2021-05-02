@@ -1,4 +1,6 @@
 const WebSocket = require('ws');
+const opn = require('opn')
+
 const sensors = require('./sensors');
 
 const wsPort = 48008;
@@ -24,6 +26,15 @@ const wss = new WebSocket.Server({
     // should not be compressed.
   },
 });
+
+const extensionLink = 'https://chrome.google.com/webstore/detail/zwipe/bbaopcbihfmndeedafhcafpojpibkgic';
+const tinderAppLink = 'https://tinder.com/app/recs';
+
+sensors.onStart(function () {
+  console.log(`Download Zwipe Extension at: ${extensionLink}`);
+  console.log(`Zwipe started. Opening Tinder ${tinderAppLink}`);
+  opn(tinderAppLink, {app: 'chrome'}); // Open on Chrome
+});
 sensors.start();
 
 wss.on('connection', function connection(ws) {
@@ -36,11 +47,14 @@ wss.on('connection', function connection(ws) {
         } else if (message.type === 'wheel') {
           // Update wheel circumference
           sensors.setWheelCircumference(message.value);
+          console.log('Updated wheel circumference: ' + message.value);
         }
       }
     } catch (e) {
     }
   });
+
+  console.log('Zwipe Extension connected');
 
   sensors.addSensorsListener(function (data) {
     // Send data to extension.

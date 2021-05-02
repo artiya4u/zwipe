@@ -1,6 +1,6 @@
 {
   "name": "zwipe",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Swipe Tinder on your bike",
   "main": "zwipe.js",
   "bin": "bin.js",
@@ -28,6 +28,7 @@
   "bugs": "https://github.com/artiya4u/zwipe/issues",
   "dependencies": {
     "ant-plus": "^0.1.24",
+    "opn": "^6.0.0",
     "ws": "^7.2.3",
     "yargs": "^15.3.1"
   },

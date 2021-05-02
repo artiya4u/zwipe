@@ -4,6 +4,12 @@
   "description": "Swipe Tinder on your bike",
   "main": "zwipe.js",
   "bin": "bin.js",
+  "pkg": {
+    "assets": [
+      "node_modules/usb/build/Release/usb_bindings.node"
+    ],
+    "outputPath": "dist"
+  },
   "scripts": {
     "start": "node zwipe.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -33,6 +39,7 @@
     "yargs": "^15.3.1"
   },
   "devDependencies": {
+    "pkg": "^5.1.0",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.8.0",

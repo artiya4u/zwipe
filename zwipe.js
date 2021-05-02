@@ -5,6 +5,7 @@ const sensors = require('./sensors');
 
 const wsPort = 48008;
 const wss = new WebSocket.Server({
+  host: '127.0.0.1', // Bind only localhost for more security.
   port: wsPort,
   perMessageDeflate: {
     zlibDeflateOptions: {
@@ -27,11 +28,12 @@ const wss = new WebSocket.Server({
   },
 });
 
-const extensionLink = 'https://chrome.google.com/webstore/detail/zwipe/bbaopcbihfmndeedafhcafpojpibkgic';
+const extensionLink = 'https://chrome.google.com/webstore/detail/jabljkdnepaogjhbdalleajldigoklkd';
+const extensionReleaseLink = 'https://github.com/artiya4u/zwipe-extension/releases';
 const tinderAppLink = 'https://tinder.com/app/recs';
 
 sensors.onStart(function () {
-  console.log(`Download Zwipe Extension at: ${extensionLink}`);
+  console.log(`Download Zwipe Extension at: ${extensionLink} or ${extensionReleaseLink}`);
   console.log(`Zwipe started. Opening Tinder ${tinderAppLink}`);
   opn(tinderAppLink, {app: 'chrome'}); // Open on Chrome
 });

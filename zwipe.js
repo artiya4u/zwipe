@@ -28,7 +28,7 @@ const wss = new WebSocket.Server({
   },
 });
 
-const extensionLink = 'https://chrome.google.com/webstore/detail/jabljkdnepaogjhbdalleajldigoklkd';
+const extensionLink = 'https://chrome.google.com/webstore/detail/nphhcljmpaobjgckapclhbcddchcfjph';
 const extensionReleaseLink = 'https://github.com/artiya4u/zwipe-extension/releases';
 const tinderAppLink = 'https://tinder.com/app/recs';
 

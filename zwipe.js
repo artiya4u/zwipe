@@ -1,5 +1,4 @@
 const WebSocket = require('ws');
-const opn = require('opn')
 
 const sensors = require('./sensors');
 
@@ -34,8 +33,7 @@ const tinderAppLink = 'https://tinder.com/app/recs';
 
 sensors.onStart(function () {
   console.log(`Download Zwipe Extension at: ${extensionLink} or ${extensionReleaseLink}`);
-  console.log(`Zwipe started. Opening Tinder ${tinderAppLink}`);
-  opn(tinderAppLink, {app: 'chrome'}); // Open on Chrome
+  console.log(`Zwipe started. Please opening Tinder app at ${tinderAppLink}`);
 });
 sensors.start();
 

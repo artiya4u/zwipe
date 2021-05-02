@@ -23,7 +23,7 @@ time. It's fun and engaging experience.
 
 ### How to use
 
-- Run Zwipe on your PC by running file `zwipe-win.exe` on Windows or run `sudo ./zwipe-linux` on Linux or run `sudo ./zwipe-macos` on MacOS
+- Run Zwipe on your PC by running file `zwipe-win.exe` on Windows or run `sudo ./zwipe-linux` on Linux or run `zwipe-macos` on MacOS
 - Goto Tinder and login to the web app: https://tinder.com/app/recs
 - Ride your tempo for 100m to swipe a Tinder profile.
 - Attack to like a profile by increasing your speed by more than 20% of your average speed.

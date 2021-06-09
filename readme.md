@@ -1,9 +1,8 @@
 # Zwipe
 
-## Swipe Tinder on your bike
+## Tinder + Indoor Cycling = Zwipe
 
-Zwipe enables you to swipe Tinder while riding your indoor bike. It can help you get fit and find your date at the same
-time. It's fun and engaging experience.
+Get Fit, Find Love: Get in shape and find your perfect match on Tinder with Zwipe indoor cycling.
 
 ### Requirements
 
